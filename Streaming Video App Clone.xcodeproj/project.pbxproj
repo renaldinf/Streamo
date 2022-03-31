@@ -29,6 +29,8 @@
 		83C6F35127F5859000A51CB9 /* YoutubeSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F35027F5859000A51CB9 /* YoutubeSearchResponse.swift */; };
 		83C6F35327F588E400A51CB9 /* TitlePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F35227F588E400A51CB9 /* TitlePreviewViewController.swift */; };
 		83C6F35527F58B9000A51CB9 /* TitlePreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F35427F58B9000A51CB9 /* TitlePreviewViewModel.swift */; };
+		83C6F35827F5A4B100A51CB9 /* StreamingAppCloneModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F35627F5A4B100A51CB9 /* StreamingAppCloneModel.xcdatamodeld */; };
+		83C6F35A27F5A70000A51CB9 /* DataPersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F35927F5A70000A51CB9 /* DataPersistanceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		83C6F35027F5859000A51CB9 /* YoutubeSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeSearchResponse.swift; sourceTree = "<group>"; };
 		83C6F35227F588E400A51CB9 /* TitlePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewController.swift; sourceTree = "<group>"; };
 		83C6F35427F58B9000A51CB9 /* TitlePreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewModel.swift; sourceTree = "<group>"; };
+		83C6F35727F5A4B100A51CB9 /* StreamingAppCloneModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StreamingAppCloneModel.xcdatamodel; sourceTree = "<group>"; };
+		83C6F35927F5A70000A51CB9 /* DataPersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistanceManager.swift; sourceTree = "<group>"; };
 		A03D9BB517511B9A784E7605 /* Pods_Streaming_Video_App_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Streaming_Video_App_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -120,8 +124,6 @@
 				83B8AB6627EC596400F1CEA1 /* Views */,
 				83B8AB6727EC596F00F1CEA1 /* ViewModels */,
 				83B8AB5C27EC51B400F1CEA1 /* Controllers */,
-				83B8AB4827EC4FF400F1CEA1 /* AppDelegate.swift */,
-				83B8AB4A27EC4FF400F1CEA1 /* SceneDelegate.swift */,
 				83B8AB5127EC4FFA00F1CEA1 /* Assets.xcassets */,
 				83B8AB5327EC4FFA00F1CEA1 /* LaunchScreen.storyboard */,
 				83B8AB5627EC4FFA00F1CEA1 /* Info.plist */,
@@ -141,6 +143,7 @@
 		83B8AB6527EC595900F1CEA1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				83C6F35627F5A4B100A51CB9 /* StreamingAppCloneModel.xcdatamodeld */,
 				834773D627ED75A400E2F9B7 /* Title.swift */,
 				83C6F35027F5859000A51CB9 /* YoutubeSearchResponse.swift */,
 			);
@@ -171,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				834773D827ED77F000E2F9B7 /* Extensions.swift */,
+				83B8AB4827EC4FF400F1CEA1 /* AppDelegate.swift */,
+				83B8AB4A27EC4FF400F1CEA1 /* SceneDelegate.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				834773D427ED71EA00E2F9B7 /* APICaller.swift */,
+				83C6F35927F5A70000A51CB9 /* DataPersistanceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -318,6 +324,7 @@
 				83B8AB6227EC523000F1CEA1 /* SearchViewController.swift in Sources */,
 				834773DD27EDA5F000E2F9B7 /* TitleCollectionViewCell.swift in Sources */,
 				834773D727ED75A400E2F9B7 /* Title.swift in Sources */,
+				83C6F35827F5A4B100A51CB9 /* StreamingAppCloneModel.xcdatamodeld in Sources */,
 				83B8AB4D27EC4FF400F1CEA1 /* MainTabBarViewController.swift in Sources */,
 				83B8AB6B27EC59E300F1CEA1 /* CollectionViewTableViewCell.swift in Sources */,
 				834773D527ED71EA00E2F9B7 /* APICaller.swift in Sources */,
@@ -325,6 +332,7 @@
 				83B8AB6427EC525000F1CEA1 /* DownloadsViewController.swift in Sources */,
 				834773D927ED77F000E2F9B7 /* Extensions.swift in Sources */,
 				83B8AB4927EC4FF400F1CEA1 /* AppDelegate.swift in Sources */,
+				83C6F35A27F5A70000A51CB9 /* DataPersistanceManager.swift in Sources */,
 				83C6F35127F5859000A51CB9 /* YoutubeSearchResponse.swift in Sources */,
 				83B8AB4B27EC4FF400F1CEA1 /* SceneDelegate.swift in Sources */,
 				83C6F35527F58B9000A51CB9 /* TitlePreviewViewModel.swift in Sources */,
@@ -540,6 +548,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		83C6F35627F5A4B100A51CB9 /* StreamingAppCloneModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				83C6F35727F5A4B100A51CB9 /* StreamingAppCloneModel.xcdatamodel */,
+			);
+			currentVersion = 83C6F35727F5A4B100A51CB9 /* StreamingAppCloneModel.xcdatamodel */;
+			path = StreamingAppCloneModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 83B8AB3D27EC4FF300F1CEA1 /* Project object */;
 }
