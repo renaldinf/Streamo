@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import XLPagerTabStrip
 
 class SearchViewController: UIViewController {
 
@@ -135,5 +136,12 @@ extension SearchViewController: UISearchResultsUpdating, SearchResultsViewContro
             vc.configure(with: viewModel)
             self?.navigationController?.pushViewController(vc, animated: true)
         }
+    }
+}
+
+extension SearchViewController: IndicatorInfoProvider {
+    
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: "Top Search")
     }
 }

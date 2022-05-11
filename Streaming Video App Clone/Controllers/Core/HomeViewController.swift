@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import XLPagerTabStrip
 
 enum Sections: Int {
     case TrendingMovies = 0
@@ -28,7 +29,6 @@ class HomeViewController: UIViewController {
         table.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
         return table
     }()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -199,5 +199,12 @@ extension HomeViewController: CollectionViewTableViewCellDelegate {
             vc.configure(with: viewModel)
             self?.navigationController?.pushViewController(vc, animated: true)
         }
+    }
+}
+
+extension HomeViewController: IndicatorInfoProvider {
+    
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: "Home")
     }
 }

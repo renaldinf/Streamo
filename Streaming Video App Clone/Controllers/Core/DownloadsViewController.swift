@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import XLPagerTabStrip
 
 class DownloadsViewController: UIViewController {
     
@@ -112,5 +113,12 @@ extension DownloadsViewController: UITableViewDelegate, UITableViewDataSource {
                 print(error.localizedDescription)
             }
         }
+    }
+}
+
+extension DownloadsViewController: IndicatorInfoProvider {
+    
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: "Downloads")
     }
 }
